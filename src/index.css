@@ -85,7 +85,7 @@ html {
   #pizza-image {
     width: 100%;
     height: 240px;
-    background-image: url('./images/pizza-transparent.png');
+    background-image: url('../public/images/pizza-transparent.png');
     background-repeat: no-repeat;
     background-size: 240px 197px;
     background-position: right;
@@ -167,7 +167,7 @@ html {
   #pasta-image {
     width: 100%;
     height: 208px;
-    background-image: url('./images/pasta-transparent.png');
+    background-image: url('../public/images/pasta-transparent.png');
     background-repeat: no-repeat;
     background-size: 206px 208px;
     background-position: right;
