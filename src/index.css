@@ -35,7 +35,7 @@ html {
 } */
 
 #container {
-  background-image: url('images/shape_1.png'), url('images/shape_2.png'), url('images/shape_3.png');
+  background-image: url('../public/images/shape_1.png'), url('../public/images/shape_2.png'), url('../public/images/shape_3.png');
   background-repeat: no-repeat;
 }
 
