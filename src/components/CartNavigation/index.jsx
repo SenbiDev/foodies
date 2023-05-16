@@ -25,7 +25,7 @@ function CartNavigation({ priceList = [] }) {
                 </Typography>
             </Stack>
 
-            <RouterLink to={'/address'} onClick={onMove}>
+            <RouterLink to={'/address'} onClick={onMove} style={{ textDecoration: 'none' }}>
                 <Button variant='contained' sx={cartNavigationComponentStyles.nextButton}>
                     Selanjutnya
                 </Button>

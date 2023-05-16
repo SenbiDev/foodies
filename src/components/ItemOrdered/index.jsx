@@ -53,7 +53,7 @@ function ItemOrdered({ orderId, total, status, _id, productOrderedList = [], ind
                         </Stack>
 
                         <Stack alignItems={{ xs: 'center', sm: 'flex-end' }} sx={{ marginTop: '50px' }}>
-                            <RouterLink to={`/invoice/${_id}`}>
+                            <RouterLink to={`/invoice/${_id}`} style={{ textDecoration: 'none' }}>
                                 <Button variant='contained' sx={itemOrderedComponentStyles.detailButtonXS}>
                                     detail
                                 </Button>
@@ -162,7 +162,7 @@ function ItemOrdered({ orderId, total, status, _id, productOrderedList = [], ind
                             </Typography>
                         </TableCell>
                         <TableCell align='right' sx={[{ paddingX: 0 }, itemOrderedComponentStyles.orderSummaryMD(show, index, ordersLength)]}>
-                            <RouterLink to={`/invoice/${_id}`}>
+                            <RouterLink to={`/invoice/${_id}`} style={{ textDecoration: 'none' }}>
                                 <Button sx={itemOrderedComponentStyles.detailButtonMD}>
                                     detail
                                 </Button>

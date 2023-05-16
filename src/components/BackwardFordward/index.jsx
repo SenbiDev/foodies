@@ -24,7 +24,7 @@ function BackwardFordward({ to }) {
     return (
         <Stack direction={'row'} justifyContent={'space-between'} sx={backwardFordwardComponentStyles.container}>
             <Button sx={backwardFordwardComponentStyles.backButton} onClick={() => navigate(-1)}>Kembali</Button>
-            <RouterLink to={to} onClick={onMove}>
+            <RouterLink to={to} onClick={onMove} style={{ textDecoration: 'none' }}>
                 <Button variant='contained' sx={backwardFordwardComponentStyles.nextButton}>Selanjutnya</Button>
             </RouterLink>
         </Stack>
