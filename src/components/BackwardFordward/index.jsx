@@ -17,7 +17,7 @@ function BackwardFordward({ to }) {
     const onMove = () => {
         if (to === '/invoice') {
             dispatch(createOrderAsync({ delivery_fee: 20000, delivery_address: orderItem?._id }));
-            setTimeout(() => dispatch(deleteOrderItem()), 1000);
+            setTimeout(() => dispatch(deleteOrderItem()), 2000);
         }
     };
 
