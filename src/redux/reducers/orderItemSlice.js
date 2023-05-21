@@ -20,7 +20,7 @@ const initialState = {
 export const getOrderListAsync = createAsyncThunk(
     'getOrderList',
     async () => {
-       let orders = await getOrderList();
+       const orders = await getOrderList();
 
        return orders;
     }

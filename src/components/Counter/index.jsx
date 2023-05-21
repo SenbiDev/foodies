@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Stack, IconButton, Typography } from "@mui/material";
 import AddRoundedIcon from '@mui/icons-material/AddRounded';
@@ -9,17 +9,19 @@ import { counterComponentStyles } from '../../styles/componentStyles';
 function Counter({ carts = [], _id, quantity }) {
     const dispatch = useDispatch();
     const [counter, setCounter] = useState(quantity);
+
+    useEffect(() => {
+      dispatch(getCartsAsync());
+    }, [dispatch, counter]);
   
     const onDecrement = () => {
         setCounter((oldState) => {
           if (oldState < 2) { 
-            setTimeout(() => dispatch(getCartsAsync()), 300);
             return 1 
           }
           const newState = oldState - 1;
           const newCartsState = carts.map((cart) => cart._id === _id ? ({...cart, qty: newState}) : cart);
           dispatch(updateCartItemsAsync({ items: newCartsState }));
-          setTimeout(() => dispatch(getCartsAsync()), 300);
           return newState;
         });
     };
@@ -29,7 +31,6 @@ function Counter({ carts = [], _id, quantity }) {
           const newState = oldState + 1;
           const newCartsState = carts.map((cart) => cart._id === _id ? ({...cart, qty: newState}) : cart);
           dispatch(updateCartItemsAsync({ items: newCartsState }));
-          setTimeout(() => dispatch(getCartsAsync()), 300);
           return newState;
         });
     };

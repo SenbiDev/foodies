@@ -27,7 +27,7 @@ function SignUpForm({ onHideSignUpDialog }) {
 
                 setTimeout(() => dispatch(setUserStatus('')), 3000);
             }, 500);
-        }, 1000);
+        }, 3600);
     };
 
     return (
