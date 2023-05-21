@@ -21,7 +21,7 @@ export const getOrderListAsync = createAsyncThunk(
     'getOrderList',
     async () => {
        let orders = await getOrderList();
-       orders.reverse();
+
        return orders;
     }
 );
