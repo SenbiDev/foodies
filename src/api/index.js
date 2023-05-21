@@ -1,4 +1,4 @@
-const BASE_URL = 'https://eduwork-server-production.up.railway.app';
+const BASE_URL = 'https://foodies-server-eight.vercel.app';
 
 function getAccessToken() {
     return localStorage.getItem('accessToken');
